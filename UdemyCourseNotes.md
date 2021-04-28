@@ -123,3 +123,94 @@ A set is an **unordered collection of unique items**. There can't be duplicated 
 #### Python different modules
 
 Python modules are Python source files which can expose classes, functions and global variables. When imported from another Python source fies, the file name is treated as a namespace. A Python package is a simply a directory of Python module(s)
+
+#### Python Directory and File management
+
+It is useful to arrange code in many directories so make it easier to manage and reach it. 
+
+**Directory / folder :** collection / set of files and subdirectories
+
+Python has the **os module**, it provides methods to work with directories and files
+
+```python
+import os #so you can use these methods
+
+print(os.getcwd) #returns current cirectory
+
+print(os.getcwdb) #returns current directory as a byte object
+
+os.chdir(dir we want to go)
+
+print(os.listdir()) #returns all files and subdirectories inside a directory
+
+os.mkdir(new_dir) #creates a new directory inside the current directory
+
+os.rename(current_name , new_name) #rename directory
+
+os.remove(file)  #removes a file
+os.rmdir(new) #removes a directory
+```
+
+
+
+#### Python dictionary
+
+Dictionaries are unordered collections of items. A dictionary has a key:value pair. 
+
+Dictionaries are optimized to retrieve values when the jey is known
+
+<u>Dictionary methods</u>
+
+```python
+my_dict = {'name': 'Anoux', 'age': 24, 'adress': 'Libertad'} # this is how you create a dictionary
+
+print(my_dict) # prints the comlete dictionary
+
+print(my_dict[1]) #prints Anoux (the value for the key Nº1)
+# when idex doesn't exists, arrays an error (key error 10)
+
+print(my_dict.get(2)) # prints 24 (the value for the key Nº2, it's like "get the value for the second key")
+# invalid keys retruns None in this case, no error
+
+my_dict[1] = "Leila" # changes the value for the key Nº1
+
+my_dict[4] = "Buenos Aires" # adds a key: value to the dictionary...... check if I can put county instead of 4!
+
+my_dict.pop(4) # removes a particular item from the dictionary. 4 referst to the key. This deletes the key:value (the whole pair)
+
+my_dict.popitem() # removes an arbitrary item
+
+del my_dict[1] # deletes a particular item, the whole pair
+
+my_dict.clear() # removes all items (all key value pairs)
+# you get an empty dict
+print(my_dict) # it should print {}
+
+del my_dict #deletes the dictionary
+print(my_dict) # in this case it arrays an error
+
+# Creating a new dictionary using Comprehension
+
+squares = {x: x*x for x in range(6)}
+print(squares) # should give me
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+print(5 in squares) # returns True because key Nº6 = 5
+
+for i in squares:
+    print(squares[i])
+    # iterates trough a dictionary, retruns values (not keys).
+    # Output should be 0, 1, 4, 9, 16, 25
+ 
+len(squares) #returns number of key: value pairs (remember to print the function)
+
+sorted(squares) # sorts the keysm not the values
+    
+
+
+```
+
+
+
+
+
