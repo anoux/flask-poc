@@ -205,12 +205,44 @@ for i in squares:
 len(squares) #returns number of key: value pairs (remember to print the function)
 
 sorted(squares) # sorts the keysm not the values
-    
-
 
 ```
 
+#### Python strings
+
+**String:** sequence of characters. A string can contain alphabets, digits and special characters
+
+Strings are converted to numbers in binary representation so computers can process them. They are inmutable
+The conversion of characters to numbers is called **encoding**
+The reverse process is called **decoding**
+The most popular encodings are ASCII and Unicode
+
+```python
+string = "MedialunasVeganas" #defines a string
+# if used triple quotes, string can extend multiple lines
+
+print(string[0]) # should return "M"
+
+# if you ask for an index that does not exists, it arrays an error (string index out of range)
+
+string[3] = "h" # this arrays erro becaouse strings do not support item assigment
 
 
+# Strings concatenation
+string1 = "Hola"
+string2 = "cómo estás?"
+print(string1 + string2) # this should give "Hola cómo estás?"
 
+# Iterating through a strings
+
+letter_count = 0
+for letters in "cómo estas?":
+    if(letters == 's'):
+        letter_count += 1
+print(letter_count,'times s letter has been found')
+```
+
+#### Python Data type conversion
+
+Python has two types of conversion, implicit and explicit
 
